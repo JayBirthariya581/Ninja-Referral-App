@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout_dash"
+    tools:context=".TutorialActivity"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view_dash"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        android:layout_gravity="start"
+        />
+
+
+
+
+    <ScrollView
+        tools:context=".UserProfileActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_dash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/yelight"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:navigationIcon="@drawable/ic_menu" />
+
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <!--Widget for exoplayer view-->
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:id="@+id/video_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:resize_mode="fill"
+                    app:hide_on_touch="true"
+                    app:show_timeout="5000"
+                    app:rewind_increment="10000"
+                    app:fastforward_increment="10000"
+                    app:use_controller="true"
+                    android:background="@color/black"
+                    app:player_layout_id="@layout/exo_player_view"
+                    app:controller_layout_id="@layout/custom_controller"/>
+
+                <ProgressBar
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/progress_bar"
+                    android:background="@color/white"
+                    android:layout_centerInParent="true"/>
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

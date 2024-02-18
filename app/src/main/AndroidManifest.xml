@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.referral.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/g2cicon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/g2cicon_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name="com.referral.app.UpdatePaymentDetailsActivity"
+            android:exported="true" />
+        <activity android:name="com.referral.app.EarningActivity" />
+        <activity android:name="com.referral.app.resetPasswordActivity" />
+        <activity android:name="com.referral.app.VerifyPhoneNo" />
+        <activity android:name="com.referral.app.AdminEditActivity" />
+        <activity android:name="com.referral.app.AdminSearchResultActivity" />
+        <activity android:name="com.referral.app.AdminSearchActivity" />
+        <activity android:name="com.referral.app.NinjaActivity" />
+        <activity
+            android:name="com.referral.app.TutorialActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:screenOrientation="portrait">
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+        </activity>
+        <activity
+            android:name="com.referral.app.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.referral.app.UserProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.referral.app.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.referral.app.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.referral.app.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.referral.app.StartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.referral.app.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
